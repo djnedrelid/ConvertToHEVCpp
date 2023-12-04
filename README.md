@@ -6,26 +6,26 @@ Den siste versjonen kan automatiseres via brytere.
 Krever NVIDIA type kort, typisk geforce eller quadro, som har NVENC dedikert brikke for maskinvarekonvertering.  
    
 
-Høyreklikk på mappe eller fil som skal konverteres.  
+**Høyreklikk på mappe eller fil som skal konverteres.**  
 ![Example UI](1.png)  
 
-Tilpass innstillinger til ønsket sluttresultat.  
+**Tilpass innstillinger til ønsket sluttresultat.**  
 ![Example UI](2.png) 
 
 ![Example UI](3.png)  
 
-Bruker NVIDIA NVENC maskinvareakselerasjon via CUDA toolkitet i FFmpeg.  
+**Bruker NVIDIA NVENC maskinvareakselerasjon via CUDA toolkitet i FFmpeg.**  
 ![Example UI](4.png) 
 
 ![Example UI](5.png)  
 
-Støtter skalering med scale_cuda og standard bicubic filter.  
+**Støtter skalering med scale_cuda og standard bicubic filter.**  
 ![Example UI](6.png)  
 
-Støtter parallelle kjøringer.  
+**Støtter parallelle kjøringer.  
 ![Example UI](7.png)  
 
-Maks 2 kjøringer om gangen på et GeForce kort med umodifisert driver.  
+**Maks 2 kjøringer om gangen på et GeForce kort med umodifisert driver.**  
 ![Example UI](8.png)  
    
    
