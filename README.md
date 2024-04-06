@@ -1,6 +1,8 @@
 ## ConvertToHEVC++ | H.265/HEVC Konverter for Windows
 
-Sist oppdatert i 2023, arkivert inntil videre. Konverter mapper fra eksempelvis h264 til h265/HEVC for plassbesparing. 
+Last updated in April 2024 with a checkbox for downmixing surround sound to stereo!  
+
+Konverter mapper fra eksempelvis h264 til h265/HEVC for plassbesparing. 
 Nyttig for dem som har mediaservere, PLEX/sonarr/radarr, etc. Opprinnelig laget for nettopp dette formålet. 
 Den siste versjonen kan automatiseres via brytere. 
 Krever NVIDIA type kort, typisk geforce eller quadro, som har NVENC dedikert brikke for maskinvarekonvertering.  
