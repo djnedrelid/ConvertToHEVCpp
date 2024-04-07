@@ -94,8 +94,8 @@ This would generally mean certain GTX 1050 cards, Quadro T1000 or later.
 
 ## Changelog  
 **2024.4.7 New release v1.9**  
-[🛠] Fixed a bug in 1.8 where it would fail if there was no subtitles to copy (-map 0:s?).
-[🛠] Changed downmixing codec from AAC to AC3 with 192k bitrate for broader entertainment hardware support. 
+[🛠] Fixed a bug in 1.8 where it would fail if there was no subtitles to copy (-map 0:s?).  
+[🛠] Changed downmixing codec from AAC to AC3 with 192k bitrate for broader entertainment hardware support.  
 [+] Updated ffmpeg binary to latest available full version for best possible transcoding.  
 
 **2024.4.5 New release v1.8**  
