@@ -1,6 +1,7 @@
 ## ConvertToHEVC++ | H.265/HEVC Konverter for Windows
 
-Last updated in April 2024 with a checkbox for downmixing surround sound to stereo!  
+Last updated in April 2024 with automated downmixing surround sound to stereo!  
+Scroll down for a complete changelog. Some information in norwegian follows first.  
 
 Konverter mapper fra eksempelvis h264 til h265/HEVC for plassbesparing. 
 Nyttig for dem som har mediaservere, PLEX/sonarr/radarr, etc. Opprinnelig laget for nettopp dette formålet. 
@@ -92,13 +93,18 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 This would generally mean certain GTX 1050 cards, Quadro T1000 or later.  
 
 ## Changelog  
+**2024.4.7 New release v1.9**  
+[🛠] Fixed a bug in 1.8 where it would fail if there was no subtitles to copy (-map 0:s?).
+[🛠] Changed downmixing codec from AAC to AC3 with 192k bitrate for broader entertainment hardware support. 
+[+] Updated ffmpeg binary to latest available full version for best possible transcoding.  
+
 **2024.4.5 New release v1.8**  
-[+]Added the command line argument DOWNMIX for downmixing surround sound to stereo.  
+[+] Added the command line argument DOWNMIX for downmixing surround sound to stereo.  
 Example usage of all available parameters:  
 ```ConvertToHEVC++.exe "C:\path\to\video.mp4" EXITWHENDONE DOWNMIX quality=slow scaling=AUTOx1080 autostart```  
 
 **2022.9.26 New release v1.7**  
-[+]Added 3 extra command line arguments.  
+[+] Added 3 extra command line arguments.  
 Example usage of all available parameters:  
 ```ConvertToHEVC++.exe "C:\path\to\video.mp4" EXITWHENDONE quality=slow scaling=AUTOx1080 autostart```  
     
@@ -110,20 +116,20 @@ Example usage of all available parameters:
 These arguments are intended for scheduled tasking, and it's OK to run multiple instances.  
 
 **2021.5.7 Update for v1.6**  
-[🛠]Swapped an internal check against failed results with less than 99% saved instead of larger than 0 bytes.  
+[🛠] Swapped an internal check against failed results with less than 99% saved instead of larger than 0 bytes.  
 A user reported a rare error where a result would be a few KiB and pass previous test.  
 
 **2021.5.1 Latest version v1.6 released May 1st, 2021**  
-[+]Now has a checkbox for “Accept bigger files”. Useful when upscaling.  
-[+]Self-repair code added for the database.  
+[+] Now has a checkbox for “Accept bigger files”. Useful when upscaling.  
+[+] Self-repair code added for the database.  
 A user submitted db had an invalid unsigned long long value logged.  
 
 **2021.2.1 Update for v1.4**  
-[🛠]Updated info text for scaling.  
+[🛠] Updated info text for scaling.  
 [+] Added 2 new scaling presets AUTOx480, AUTOx576.  
 
 **2021.1.29 New release v1.4**  
-[🛠]Fixed a bug where if a queue had been interrupted and a 0 byte HBYT file was left behind, future processing of
+[🛠] Fixed a bug where if a queue had been interrupted and a 0 byte HBYT file was left behind, future processing of
 that file would silently fail if original was HEVC.  
 [+] User requested feature: Support for 3rd argument EXITWHENDONE so it can be scheduled to run in e.g.
 taskschd.msc. Remember to put 2nd argument (folder or filename to convert) in quotes("") if you use this feature.  
@@ -133,7 +139,7 @@ for when you want to transcode it anyway (scaling etc).
 for when you want to re-process files for any reason.  
 
 **2021.1.11 Update for v1.3**  
-[🛠]Existing HEVC files are now tagged HBYT as well, instead of being entirely skipped.  
+[🛠] Existing HEVC files are now tagged HBYT as well, instead of being entirely skipped.  
 
 **2021.1.9 New release v1.3**  
 [🛠] Improvements and fixes. Improved pre-existing HEVC detection by altering the regular expression used. Fixed a
@@ -141,7 +147,7 @@ bug where filename searches would include directory as well, causing destination
 directory names containing encoding type in the name (x264, h.264 etc).  
 
 **2021.1.6 New release v1.2**  
-[🛠]Statistics behavior has been changed from saving to DB after full completion, to saving after every converted file.
+[🛠] Statistics behavior has been changed from saving to DB after full completion, to saving after every converted file.
 This will make sure that every converted file is a part if history, even if a batch job has been interrupted and/or
 cancelled.  
 
