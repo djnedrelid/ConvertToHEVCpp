@@ -1,6 +1,6 @@
 ## ConvertToHEVC++ | H.265/HEVC Konverter for Windows
 
-Last updated in April 2024 with automated downmixing surround sound to stereo!  
+Last updated in September 2024 with automated downmixing surround sound to stereo!  
 Scroll down for a complete changelog. Some information in norwegian follows first.  
 
 Konverter mapper fra eksempelvis h264 til h265/HEVC for plassbesparing. 
@@ -93,7 +93,7 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 This would generally mean certain GTX 1050 cards, Quadro T1000 or later.  
 
 ## Changelog 
-**2024.9.26 New release v2.0**
+**2024.9.26 New release v2.0**  
 [🛠] Changed downmixing codec from AC3 to EAC3 (Dolby Digital Plus) with 384k bitrate.
  
 **2024.4.7 New release v1.9**  
