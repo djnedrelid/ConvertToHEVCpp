@@ -92,7 +92,10 @@ get a Quadro card.
 The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new). I recommend any Turing based card.  
 This would generally mean certain GTX 1050 cards, Quadro T1000 or later.  
 
-## Changelog  
+## Changelog 
+**2024.9.26 New release v2.0**
+[🛠] Changed downmixing codec from AC3 to EAC3 (Dolby Digital Plus) with 384k bitrate.
+ 
 **2024.4.7 New release v1.9**  
 [🛠] Fixed a bug in 1.8 where it would fail if there was no subtitles to copy (-map 0:s?).  
 [🛠] Changed downmixing codec from AAC to AC3 with 256k bitrate for broader entertainment hardware support.  
