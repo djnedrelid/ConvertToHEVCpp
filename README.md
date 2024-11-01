@@ -93,12 +93,15 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 This would generally mean certain GTX 1050 cards, Quadro T1000 or later.  
 
 ## Changelog 
+**2024.11.1 Updated release v2.0**  
+[🛠] Changed back to AC3 (Dolby Digital) due to better toslink/optical TV transfer support. Still 384kb/s.
+
 **2024.9.26 New release v2.0**  
 [🛠] Changed downmixing codec from AC3 to EAC3 (Dolby Digital Plus) with 384k bitrate.
  
 **2024.4.7 New release v1.9**  
 [🛠] Fixed a bug in 1.8 where it would fail if there was no subtitles to copy (-map 0:s?).  
-[🛠] Changed downmixing codec from AAC to AC3 with 256k bitrate for broader entertainment hardware support.  
+[🛠] Changed downmixing codec from AAC to AC3 with 384k bitrate for broader entertainment hardware support.  
 [+] Updated ffmpeg binary to latest available full version for best possible transcoding (latest codecs).  
 
 **2024.4.5 New release v1.8**  
