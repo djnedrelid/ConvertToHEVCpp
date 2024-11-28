@@ -32,7 +32,7 @@ Made to convert H.264 media libraries to H.265/HEVC to save storage capacity. Sc
 ## Features  
 
 * Hardware accelerated bulk or single conversion of x264 media  
-to x265/HEVC via NVIDIA NVENC and CUDA FFmpeg toolkit.  
+to x265/HEVC via NVIDIA NVENC or INTEL QUICKSYNC. Or software CPU.
 
 * Automatic recursive search for MKV and MP4 video files via  
 Explorer right-click context menu on folder you select.  
@@ -71,7 +71,7 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 ## Current command line arguments available 
 1. **"c:\path\to\videofile"** (must be first argument).  
 2. **autostart** (starts conversion automatically).  
-3. **gpu=nvidia|intel** (choose between nvidia and intel).  
+3. **gpu=nvidia|intel|cpu** (choose between nvidia, intel and cpu).  
 4. **EXITWHENDONE** (exits program when done).  
 5. **DOWNMIX** (downmixes audio to stereo).  
 6. **scaling=AUTOx1080** (automatic width proportional to chosen height from 720 to 2160).  
@@ -83,7 +83,10 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 <br>
 
 ## Changelog  
-
+**2024.11.28 Updated release v.3.1**  
+[+] Added support for software(libx265) CPU encoding (gpu=cpu).  
+[🛠] Save history db should no longer be reset when updating.  
+  
 **2024.11.10 New release v.3.0**  
 [+] Added support for Intel Quicksync conversion!  
 Available via scroll menu and 'gpu=nvidia|intel' argument.  
