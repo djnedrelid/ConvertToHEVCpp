@@ -1,38 +1,16 @@
 
 ## ConvertToHEVC++ | H.265/HEVC Converter for Windows  
 
-Made to convert H.264 media libraries to H.265/HEVC to save storage capacity. Scroll down for changelog.  
+Made to convert H.264 media libraries to H.265/HEVC to save storage capacity.  
+Right-click files or entire folders, and/or choose them from within the program. 
 
-**Right click to convert a folder.**  
-![Example UI](1.png)  
-<br>
-
-**Customize settings (outdated image).**  
-![Example UI](2.png)  
-![Example UI](3.png)  
-<br>
-
-**Uses Nvidia NVENC or Intel® Quick Sync via FFmpeg.**  
-![Example UI](4.png)  
-![Example UI](5.png)  
-<br>
-
-**Supports scaling and standard bicubic filter.**  
-![Example UI](6.png)  
-<br>
-
-**Supports multiple instances.**  
-![Example UI](7.png)  
-<br>
-
-**Max 2 streams/instances on GeForce cards with unmodified drivers.**  
-![Example UI](8.png)  
+![Example UI](demo_v3.2.png)  
 <br>
    
 ## Features  
 
 * Hardware accelerated bulk or single conversion of x264 media  
-to x265/HEVC via NVIDIA NVENC or INTEL QUICKSYNC. Or software CPU.
+to x265/HEVC via NVIDIA NVENC or INTEL QUICKSYNC. Or software CPU.  
 
 * Automatic recursive search for MKV and MP4 video files via  
 Explorer right-click context menu on folder you select.  
@@ -71,23 +49,37 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 ## Current command line arguments available 
 1. **"c:\path\to\videofile"** (must be first argument).  
 2. **autostart** (starts conversion automatically).  
-3. **gpu=nvidia|intel|cpu** (choose between nvidia, intel and cpu).  
+3. **encoder=hevc_nvenc|hevc_qsv|libx265|libsvtav1**  (how to encode).  
 4. **EXITWHENDONE** (exits program when done).  
 5. **DOWNMIX** (downmixes audio to stereo).  
 6. **scaling=AUTOx1080** (automatic width proportional to chosen height from 720 to 2160).  
-7. **quality=slow|medium|fast** (with slow being best quality).  
+7. **quality=Level1|Level2|Level3|Level4|Level5|Level6|Level7** (Level7 = best).  
 <br>
 
 **Example usage from command line**:  
-```"C:\Program Files\Thronic\ConvertToHEVC++\ConvertToHEVC++.exe" "C:\Users\Administrator\Downloads\Arcane - S01E01 - Welcome to the Playground WEBDL-1080p-TEPES.mkv" autostart EXITWHENDONE DOWNMIX scaling=AUTOx1080 quality=slow gpu=intel```
+```"C:\Program Files\Thronic\ConvertToHEVC++\ConvertToHEVC++.exe" "C:\Users\Administrator\Downloads\video.mkv" autostart EXITWHENDONE DOWNMIX scaling=AUTOx1080 quality=Level7 encoder=hevc_nvenc```
 <br>
 
 ## Changelog  
-**2024.11.28 Updated release v.3.1**  
+**2024.12.7 Updated release v3.2**  
+[+] Updated ffmpeg binary. Using latest full from gyan.dev  
+[+] Added 7 new quality profiles and removed deprecated ones.  
+[+] Added AV1 software encoding, using SVT-AV1(libsvtav1).  
+[+] Hardware encoders will now encode to 10-bit colors when scaling.  
+[+] CPU profiles will now encode to 10-bit colors always.  
+[+] All encoders have been tuned slightly towards quality.  
+[+] Can now load file and folder from within the program.  
+[+] Setup/Update will now therefore add a shortcut to the desktop.  
+[🛠] Minor fixes related to settings when using autostart.  
+  
+**NOTE**: Some of these changes may require you to revise your scheduled commands!  
+**NOTE**: I considered adding av1_nvenc and av1_qsv but hardware requirements are too high for me to test.  
+  
+**2024.11.28 Updated release v3.1**  
 [+] Added support for software(libx265) CPU encoding (gpu=cpu).  
 [🛠] Save history db should no longer be reset when updating.  
   
-**2024.11.10 New release v.3.0**  
+**2024.11.10 New release v3.0**  
 [+] Added support for Intel Quicksync conversion!  
 Available via scroll menu and 'gpu=nvidia|intel' argument.  
 [🛠] Fixed Main 10 detections that would go unnoticed.  
