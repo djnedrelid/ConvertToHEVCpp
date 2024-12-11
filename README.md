@@ -72,6 +72,7 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 [+] Setup/Update will now therefore add a shortcut to the desktop.  
 [🛠] Minor fixes related to settings when using autostart.  
 [🛠] Changed AC3 conversion from 384 to 640kbps (max) bitrate.  
+[🛠] Lowered AC3 conversion volume by -6dB for less chance of clipping.  
   
 **NOTE**: Some of these changes may require you to revise your scheduled commands!  
 **NOTE**: I considered adding av1_nvenc and av1_qsv but hardware requirements are too high for me to test.  
