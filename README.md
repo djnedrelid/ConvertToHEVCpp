@@ -61,6 +61,9 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 <br>
 
 ## Changelog  
+**2025.1.2 Updated release v3.3**  
+[🛠] Timestamps are used for percentage, but sometimes time is N/A. Progress will now represent this as (~%) to show it's still converting.  
+  
 **2024.12.7 Updated release v3.2**  
 [+] Updated ffmpeg binary. Using latest full from gyan.dev  
 [+] Added 7 new quality profiles and removed deprecated ones.  
