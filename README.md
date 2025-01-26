@@ -61,6 +61,9 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 <br>
 
 ## Changelog  
+**2025.1.26 Updated release v3.4**  
+[🛠] A few tweaks and optimizations to calm the UI down a bit during large queues.  
+  
 **2025.1.2 Updated release v3.3**  
 [🛠] Timestamps are used for percentage, but sometimes time is N/A. Progress will now represent this as (~%) to show it's still converting.  
   
