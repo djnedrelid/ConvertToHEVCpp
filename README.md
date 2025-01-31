@@ -4,7 +4,7 @@
 Made to convert H.264 media libraries to H.265/HEVC to save storage capacity.  
 Right-click files or entire folders, and/or choose them from within the program. 
 
-![Example UI](demo_v3.2.png)  
+![Example UI](demo_v3.5.png)  
 <br>
    
 ## Features  
@@ -61,6 +61,10 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 <br>
 
 ## Changelog  
+**2025.1.31 Updated release v3.5**  
+[🛠] GUI changes for listing files.  
+[🛠] HEVC detection during bulk fixed.  
+  
 **2025.1.26 Updated release v3.4**  
 [🛠] A few tweaks and optimizations to calm the UI down a bit during large queues.  
   
