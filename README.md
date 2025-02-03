@@ -63,7 +63,8 @@ The card needs to have [NVENC Support](https://developer.nvidia.com/video-encode
 ## Changelog  
 **2025.1.31 Updated release v3.5**  
 [🛠] GUI changes for listing files.  
-[🛠] HEVC detection during bulk fixed.  
+[🛠] A HEVC detection bug during bulk conversions fixed.  
+[🛠] Better tuned AC3 audio stereo downmix conversion.  
   
 **2025.1.26 Updated release v3.4**  
 [🛠] A few tweaks and optimizations to calm the UI down a bit during large queues.  
